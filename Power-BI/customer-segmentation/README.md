@@ -1,5 +1,5 @@
 
-# Customer Segmentation Analysis
+# Customer Segmentation  and Behavioral Analysis
 
 ## Overview
 This project uses Power BI to explore customer characteristics and develop an interactive view of customer demographics and distribution.
