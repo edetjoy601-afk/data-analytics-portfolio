@@ -32,12 +32,12 @@ Explored retail sales data using SQL queries to examine sales, profit, product c
 
 [View Project](SQL/retail-sales-analysis/README.md)
 
-### 3. Customer Segmentation Analysis
+### 3. Customer Segmentation and Behavioral Analysis
 **Tool:** Power BI
 
 Developed a customer analysis dashboard to explore customer demographics, income, tenure, and regional distribution.
 
-[View Project](Power-BI/customer-segmentation/README.md)
+[View Project](Power-BI/customer-segmentation-behavioral-analysis/README.md)
 
 ### 4. Amazon Sales Exploratory Data Analysis
 **Tool:** Python
@@ -46,14 +46,14 @@ Worked on exploratory analysis of Amazon sales data to practice data preparation
 
 [View Project](Python/amazon-sales-analysis/README.md)
 
-### 5. Supplier, Inventory and Warehouse Analysis
+### 5. Heavy Supplier, Inventory and Warehouse Analysis
 **Tools:** Power BI, SQL, Python, as applicable to each completed task
 
 **Status:** In progress — Cadetx Virtual Work Experience
 
 Working on supplier, inventory, warehouse, procurement, and sales data, including data profiling, data quality validation, KPI definitions, and dashboard development.
 
-[View Project](Internships/cadetx-supplier-inventory-warehouse/README.md)
+[View Project](Internships/cadetx-heavysupplier-inventory-warehouse/README.md)
 
 ## Other Experience
 
