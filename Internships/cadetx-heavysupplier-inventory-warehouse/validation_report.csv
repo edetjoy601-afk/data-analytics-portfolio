@@ -1,0 +1,4 @@
+dataset,rows,columns,duplicate_rows,missing_cells,missing_po_id,missing_product_id,missing_supplier_id,missing_branch_id,missing_so_id,missing_customer_id
+purchase_orders_integrated,155495,68,0,30836,0.0,0,0.0,0,,
+sales_orders_integrated,130402,47,0,0,,0,,0,0.0,0.0
+stock_inventory_integrated,237230,52,0,0,,0,,0,,
