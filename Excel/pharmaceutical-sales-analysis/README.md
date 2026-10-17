@@ -40,6 +40,3 @@ After analyzing the pharmaceutical sales dataset in Microsoft Excel, I was able 
 
 ## Skills Demonstrated
 Data cleaning, spreadsheet analysis, data validation, aggregation, and reporting.
-
-## Limitations
-[Document any limitations of the dataset or analysis.]
