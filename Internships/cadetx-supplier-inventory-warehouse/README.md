@@ -1,5 +1,5 @@
 
-# Supplier, Inventory and Warehouse Analysis
+# Heavy Supplier, Inventory and Warehouse Analysis
 
 ## Overview
 This ongoing project is part of my Data Analyst Virtual Work Experience with Cadetx. It focuses on analyzing supplier, procurement, sales, inventory, and warehouse data.
