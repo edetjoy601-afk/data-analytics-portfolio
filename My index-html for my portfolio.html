@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Peter Joy Edet — Data Analytics portfolio featuring Excel, SQL, Power BI and Python projects.">
+  <title>Peter Joy Edet | Data Analytics Portfolio</title>
+  <style>
+    :root {
+      --cream: #f8f4ee;
+      --paper: #fffdf9;
+      --sand: #e9dfd2;
+      --nude: #d7c2ad;
+      --taupe: #a58d78;
+      --brown: #46372d;
+      --ink: #29231f;
+      --muted: #766b62;
+      --line: #e9e1d8;
+      --accent: #9b7658;
+      --shadow: 0 18px 50px rgba(70,55,45,.08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(248,244,238,.92); backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(233,225,216,.8);
+    }
+    .nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-family: Georgia, serif; font-size: 20px; font-weight: 700; letter-spacing: -.4px; color: var(--brown); }
+    nav { display: flex; flex-wrap: wrap; gap: 22px; }
+    nav a { font-size: 13px; color: var(--muted); }
+    nav a:hover, .text-link:hover { color: var(--accent); }
+    .hero { padding: 92px 0 78px; display: grid; grid-template-columns: 1.4fr .8fr; align-items: center; gap: 54px; }
+    .eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: 2.4px; font-size: 11px; font-weight: 750; }
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; color: var(--brown); line-height: 1.15; }
+    h1 { font-size: clamp(42px, 6vw, 68px); letter-spacing: -2px; margin: 15px 0 18px; }
+    h1 span { color: var(--taupe); font-style: italic; font-weight: 400; }
+    .lead { color: var(--muted); font-size: 17px; max-width: 620px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 19px; border-radius: 5px; font-size: 13px; font-weight: 650; border: 1px solid var(--brown); }
+    .btn.primary { background: var(--brown); color: white; }
+    .btn.secondary { color: var(--brown); background: transparent; }
+    .hero-note { background: var(--sand); border-radius: 48% 48% 8px 8px; min-height: 300px; padding: 38px 30px; display: flex; flex-direction: column; justify-content: end; box-shadow: var(--shadow); }
+    .hero-note .monogram { font-family: Georgia, serif; font-size: 92px; line-height: 1; color: rgba(70,55,45,.72); text-align: center; margin-bottom: auto; }
+    .hero-note p { color: var(--brown); font-family: Georgia, serif; font-size: 19px; text-align: center; margin: 20px 0 0; }
+    section { padding: 76px 0; }
+    .section-head { max-width: 650px; margin-bottom: 34px; }
+    .section-head h2 { font-size: clamp(30px, 4vw, 42px); margin: 9px 0 12px; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: start; }
+    .about-copy p { color: var(--muted); margin-top: 0; }
+    .facts { display: grid; gap: 12px; }
+    .fact { background: var(--paper); border: 1px solid var(--line); padding: 17px 19px; border-radius: 6px; }
+    .fact small { display: block; color: var(--taupe); text-transform: uppercase; letter-spacing: 1.4px; font-size: 10px; font-weight: 750; }
+    .fact strong { display: block; color: var(--brown); margin-top: 4px; font-size: 14px; }
+    .skills { display: grid; grid-template-columns: repeat(4, 1fr); gap: 13px; }
+    .skill { background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 19px; }
+    .skill b { color: var(--brown); display: block; font-family: Georgia, serif; font-size: 18px; }
+    .skill span { color: var(--muted); font-size: 12px; }
+    .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .project { background: var(--paper); border: 1px solid var(--line); border-radius: 7px; overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; }
+    .project:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .project-top { min-height: 112px; background: linear-gradient(135deg, #e9dfd2, #f4ede4); padding: 22px; display: flex; justify-content: space-between; align-items: start; }
+    .project-top .number { font-family: Georgia, serif; font-size: 34px; color: rgba(70,55,45,.5); }
+    .tag { border: 1px solid rgba(70,55,45,.22); border-radius: 30px; padding: 5px 10px; color: var(--brown); font-size: 10px; letter-spacing: .5px; }
+    .project-body { padding: 22px; }
+    .project h3 { font-size: 22px; margin: 0 0 10px; }
+    .project p { color: var(--muted); font-size: 13px; margin: 0 0 17px; }
+    .text-link { color: var(--accent); font-size: 12px; font-weight: 750; }
+    .timeline { border-left: 1px solid var(--nude); margin-left: 7px; padding-left: 25px; display: grid; gap: 25px; }
+    .timeline-item { position: relative; }
+    .timeline-item:before { content: ""; position: absolute; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); left: -30px; top: 7px; }
+    .timeline-item h3 { font-size: 19px; margin: 0 0 4px; }
+    .timeline-item .meta { color: var(--accent); font-size: 11px; font-weight: 750; letter-spacing: .6px; text-transform: uppercase; }
+    .timeline-item p { color: var(--muted); font-size: 13px; margin: 7px 0 0; }
+    .contact-box { background: var(--brown); color: #f8f4ee; border-radius: 8px; padding: 45px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .contact-box h2 { color: #fffaf3; font-size: 36px; margin: 8px 0; }
+    .contact-box p { color: #dfd2c5; margin: 0; max-width: 540px; font-size: 14px; }
+    .contact-box .btn { border-color: #e8d9c9; color: var(--brown); background: #f8f4ee; white-space: nowrap; }
+    footer { padding: 28px 0; color: var(--muted); font-size: 11px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 22px; }
+    @media (max-width: 760px) {
+      .nav { align-items: flex-start; flex-direction: column; padding: 16px 0; gap: 10px; }
+      nav { gap: 13px; }
+      .hero { grid-template-columns: 1fr; padding: 65px 0 55px; gap: 30px; }
+      .hero-note { min-height: 220px; border-radius: 100px 100px 8px 8px; }
+      .about-grid, .projects { grid-template-columns: 1fr; }
+      .skills { grid-template-columns: repeat(2, 1fr); }
+      .contact-box { padding: 30px 24px; align-items: flex-start; flex-direction: column; }
+      section { padding: 58px 0; }
+    }
+    @media (max-width: 390px) { .wrap { width: min(100% - 28px, 1080px); } nav { gap: 10px; } nav a { font-size: 11px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home">Peter Joy Edet<span style="color:#a58d78">.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap hero" id="home">
+      <div>
+        <div class="eyebrow">Data Analytics Portfolio</div>
+        <h1>Turning data into <span>meaningful insights.</span></h1>
+        <p class="lead">Hello, I'm Peter Joy Edet — an aspiring Data Analyst interested in transforming data into clear insights that support informed decisions. I work with Excel, SQL, Power BI and Python, and I'm exploring analytics engineering.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">Explore my projects</a>
+          <a class="btn secondary" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="hero-note" aria-label="Personal monogram">
+        <div class="monogram">PJ</div>
+        <p>Curious mind. Analytical approach. Continuous growth.</p>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">A little about me</div>
+          <h2>Where science meets data.</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>I have an academic background in Plant Biology and a growing focus on data analytics. My scientific training strengthened my interest in evidence-based thinking, research, observation and problem-solving.</p>
+            <p>I'm developing practical skills in data cleaning, exploratory data analysis, visualization, reporting and KPI development. I enjoy learning by working through projects, documenting my process and communicating findings clearly.</p>
+            <p>My longer-term interests include analytics engineering and applying data skills to areas such as agriculture, research and business operations.</p>
+          </div>
+          <div class="facts">
+            <div class="fact"><small>Education</small><strong>B.Sc. Plant Biology · University of Ilorin</strong></div>
+            <div class="fact"><small>Based in</small><strong>Nigeria</strong></div>
+            <div class="fact"><small>Career focus</small><strong>Data Analytics & Business Intelligence</strong></div>
+            <div class="fact"><small>Currently exploring</small><strong>Analytics Engineering</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" style="background:#f1e9df">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Tools & capabilities</div>
+          <h2>My technical toolkit.</h2>
+          <p>Tools I use and continue to develop through practical projects.</p>
+        </div>
+        <div class="skills">
+          <div class="skill"><b>Excel</b><span>Data cleaning · PivotTables · Reporting</span></div>
+          <div class="skill"><b>SQL</b><span>Queries · Aggregations · Exploratory analysis</span></div>
+          <div class="skill"><b>Power BI</b><span>Dashboards · Data modeling · DAX</span></div>
+          <div class="skill"><b>Python</b><span>Pandas · Data cleaning · Visualization</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Selected work</div>
+          <h2>Projects & practical experience.</h2>
+          <p>A selection of analytical projects. Project links and supporting files will be added as each repository is reviewed and published.</p>
+        </div>
+        <div class="projects">
+          <article class="project">
+            <div class="project-top"><span class="number">01</span><span class="tag">EXCEL</span></div>
+            <div class="project-body"><h3>Pharmaceutical Sales Performance</h3><p>Cleaned and prepared sales data, built PivotTable summaries and explored product performance, country-level revenue and yearly sales trends.</p><a class="text-link" href="https://github.com/edetjoy601-afk">ADD PROJECT LINK ↗</a></div>
+          </article>
+          <article class="project">
+            <div class="project-top"><span class="number">02</span><span class="tag">SQL</span></div>
+            <div class="project-body"><h3>Retail Sales Analysis</h3><p>Used SQL to explore retail transactions, revenue, profit, regional performance and product-category results.</p><a class="text-link" href="https://github.com/edetjoy601-afk">ADD PROJECT LINK ↗</a></div>
+          </article>
+          <article class="project">
+            <div class="project-top"><span class="number">03</span><span class="tag">POWER BI</span></div>
+            <div class="project-body"><h3>Customer Segmentation</h3><p>Developed an interactive report to examine customer demographics, income, tenure and segment patterns.</p><a class="text-link" href="https://github.com/edetjoy601-afk">ADD PROJECT LINK ↗</a></div>
+          </article>
+          <article class="project">
+            <div class="project-top"><span class="number">04</span><span class="tag">PYTHON</span></div>
+            <div class="project-body"><h3>Amazon Sales Analysis</h3><p>Applied Python-based data preparation and exploratory analysis to examine sales patterns and communicate findings.</p><a class="text-link" href="https://github.com/edetjoy601-afk">ADD PROJECT LINK ↗</a></div>
+          </article>
+          <article class="project">
+            <div class="project-top"><span class="number">05</span><span class="tag">TEAM PROJECT</span></div>
+            <div class="project-body"><h3>Supplier, Inventory & Warehouse Analysis</h3><p>Collaborative analytics work involving data quality, KPI development and operational analysis. Individual responsibilities should be described separately from team outputs.</p><a class="text-link" href="https://github.com/edetjoy601-afk">ADD APPROVED PROJECT LINK ↗</a></div>
+          </article>
+          <article class="project">
+            <div class="project-top"><span class="number">06</span><span class="tag">UPCOMING</span></div>
+            <div class="project-body"><h3>Nigerian Agricultural Production Analysis</h3><p>An upcoming project connecting data analytics with an area related to my academic background.</p><span class="text-link">IN DEVELOPMENT</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" style="background:#f1e9df">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Background</div>
+          <h2>Education & experience.</h2>
+          <p>A foundation in science, research and developing analytical practice.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item"><div class="meta">Professional development</div><h3>CadetX — Data Analyst Virtual Work Experience</h3><p>Collaborative supplier, inventory and warehouse analysis project, contributing to data profiling, data documentation and KPI development. Add dates and exact individual deliverables after confirming the final project record.</p></div>
+          <div class="timeline-item"><div class="meta">Education</div><h3>B.Sc. Plant Biology</h3><p>University of Ilorin. Academic foundation in plant science, research methods and scientific analysis.</p></div>
+          <div class="timeline-item"><div class="meta">Technical development</div><h3>Data Analytics Training & Projects</h3><p>Developing practical capability in Excel, SQL, Power BI and Python through structured learning and portfolio projects.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact-box">
+          <div><div class="eyebrow" style="color:#d7c2ad">Let's connect</div><h2>Have a project or opportunity?</h2><p>I'm interested in connecting with people working in data analytics, business intelligence, research and analytics engineering.</p></div>
+          <a class="btn" href="mailto:YOUR-EMAIL@example.com">Email me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-inner"><span>© <span id="year"></span> Peter Joy Edet</span><span>Designed with clarity and curiosity.</span><span><a href="https://github.com/edetjoy601-afk">GitHub</a> · <a href="https://www.linkedin.com/in/joy-peter-a4/">LinkedIn</a></span></div></footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
