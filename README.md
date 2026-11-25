@@ -18,35 +18,7 @@ My academic background in Plant Biology has strengthened my interest in research
 
 ## Projects
 
-### 1. Pharmaceutical Sales Performance Analysis
-**Tool:** Microsoft Excel
-
-Cleaned and prepared pharmaceutical sales data, used spreadsheet functions and PivotTables, and analyzed sales performance.
-
-[View Project](Excel/pharmaceutical-sales-analysis/README.md)
-
-### 2. Retail Sales Exploratory Data Analysis
-**Tool:** SQL
-
-Explored retail sales data using SQL queries to examine sales, profit, product categories, and regional performance.
-
-[View Project](SQL/retail-sales-analysis/README.md)
-
-### 3. Customer Segmentation and Behavioral Analysis
-**Tool:** Power BI
-
-Developed a customer analysis dashboard to explore customer demographics, income, tenure, and regional distribution.
-
-[View Project](Power-BI/customer-segmentation-behavioral-analysis/README.md)
-
-### 4. Amazon Sales Exploratory Data Analysis
-**Tool:** Python
-
-Worked on exploratory analysis of Amazon sales data to practice data preparation, analysis, and communicating findings.
-
-[View Project](Python/amazon-sales-analysis/README.md)
-
-### 5. Heavy Supplier, Inventory and Warehouse Analysis
+### 1.  Heavy Supplier, Inventory and Warehouse Analysis
 **Tools:** Power BI, SQL, Python, as applicable to each completed task
 
 **Status:** In progress — Cadetx Virtual Work Experience
@@ -54,7 +26,38 @@ Worked on exploratory analysis of Amazon sales data to practice data preparation
 Working on supplier, inventory, warehouse, procurement, and sales data, including data profiling, data quality validation, KPI definitions, and dashboard development.
 
 [View Project](Internships/cadetx-heavysupplier-inventory-warehouse/README.md)
+ 
 
+### 2. Customer Segmentation and Behavioral Analysis
+**Tool:** Power BI
+
+Developed a customer analysis dashboard to explore customer demographics, income, tenure, and regional distribution.
+
+[View Project](Power-BI/customer-segmentation-behavioral-analysis/README.md)
+
+
+### 3.  Amazon Sales Exploratory Data Analysis
+**Tool:** Python
+
+Worked on exploratory analysis of Amazon sales data to practice data preparation, analysis, and communicating findings.
+
+[View Project](Python/amazon-sales-analysis/README.md)
+
+
+### 4.Retail Sales Exploratory Data Analysis
+**Tool:** SQL
+
+Explored retail sales data using SQL queries to examine sales, profit, product categories, and regional performance.
+
+[View Project](SQL/retail-sales-analysis/README.md)
+
+
+### 5. Pharmaceutical Sales Performance Analysis
+**Tool:** Microsoft Excel
+
+Cleaned and prepared pharmaceutical sales data, used spreadsheet functions and PivotTables, and analyzed sales performance.
+
+[View Project](Excel/pharmaceutical-sales-analysis/README.md)
 ## Other Experience
 
 - Data analysis internship experience with RWA Inc, subject to applicable confidentiality requirements.
@@ -69,6 +72,7 @@ University of Ilorin
 
 - **LinkedIn:** [https://www.linkedin.com/in/joy-peter-a4ab932a2]
 - **Email:** [edetjoy601@gmail.com]
+- **Portfolio:** [https://edetjoy601-afk.github.io/data-analytics-portfolio/]
 
 ---
 
